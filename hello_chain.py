@@ -14,6 +14,7 @@ model = ChatGoogleGenerativeAI(
     model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
     # 0 = respuestas lo más estables y predecibles posible (útil para agentes)
     temperature=0,
+     max_retries=3,
 )
 
 # PROMPT TEMPLATE: mensaje con huecos ({concepto}) que se rellenan al ejecutar.
